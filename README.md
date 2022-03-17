@@ -1,0 +1,4 @@
+## Code Challange
+
+
+Develop a program to find out nearby people. You are allowed to use any resource from the internet, that makes your life easier. Suppose you have GPS coordinates of  a large number N of people.  How can you find all those who are geographically close, e.g., within a radius of 1km ?  Remember, it may be millions of instances, so a direct search is too slow. Also, the coordinates of each person may change every second, so basically you need an NxN distance grid, since you need to update the distance information of all N people constantly. Can you think of an algorithm to solve this in computable time? Take a modern normal computer as computational backbone.

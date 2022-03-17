@@ -1,0 +1,9 @@
+- understand how google maps works
+- insert static coordinates 
+- (pass from array to object)
+- function creates N of people with random coordinates and name (object)
+- find function that calculate the distance between two points (lat and lon) (haversine??)
+- function combines every "person" of people (nested loop) to find the distance in a radius of 1km
+- insert the function in the maps
+- create a circle with radius 1 km to show the distance
+- create a function that simulates the movement of people on the map
