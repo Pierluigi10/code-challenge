@@ -7,3 +7,10 @@
 - insert the function in the maps
 - create a circle with radius 1 km to show the distance
 - create a function that simulates the movement of people on the map
+
+
+
+
+
+
+- npm i haversine-distance
