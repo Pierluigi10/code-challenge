@@ -1,3 +1,4 @@
+
 import haversine from "haversine-distance";
 
 //First point in your haversine calculation
@@ -65,8 +66,19 @@ function generatePeople(num) {
 }
 // console.log(generateCoordinates(10));
 
-const locations = generatePeople(100);
+const locations = generatePeople(4);
 console.log(locations);
+
+
+/* 
+1-2
+1-3
+1-4
+2-3
+2-4
+3-4
+*/
+
 
 // const getDistances = () => {
 //   let result = [];
@@ -93,6 +105,11 @@ console.log(locations);
 console.log(filterLocations());
 
  */
+
+
+
+
+
 const getFilteredLocations = () => {
     let result = [];
 
@@ -103,15 +120,18 @@ const getFilteredLocations = () => {
       const haversine_km = haversine_m / 1000; //Results in kilometers
       const roundedString = haversine_km.toFixed(2);
       const rounded = Number(roundedString);
+      result.push({first: locations[i], second: locations[j], distance: rounded});
     //   if(rounded <= 1) result.push({first: locations[i], second: locations[j], distance: rounded});
-      if(rounded <= 1) result.push(locations[i], locations[j]);  
+    //   if(rounded <= 1) result.push(locations[i], locations[j]);  
         //   result.filter((distance) => distance <= 1)
 
     }
   }
-  return [...new Set(result)];
+//   return [...new Set(result)];
+
+
+console.log(result.length);
+  return result;
 } 
 
 console.log(getFilteredLocations())
-
-
