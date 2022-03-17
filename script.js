@@ -21,7 +21,7 @@ function initMap() {
   }
 
   const people = generatePeople(100);
-  console.log(people);
+  // console.log(people);
 
   const getFilteredPeople = () => {
     let result = [];
@@ -39,13 +39,58 @@ function initMap() {
         //   result.filter((distance) => distance <= 1)
       }
     }
+    // console.log(result);
     return [...new Set(result)];
+
   };
 
-  // console.log(getFilteredPeople());
-  const locations = getFilteredPeople();
-  console.log(locations);
+  // // console.log(getFilteredPeople());
+  // const locations = getFilteredPeople();
+/* 
+  const getFilteredPeople = () => {
+    let result = [];
 
+    for (let i = 0; i < people.length; i++) {
+      // combine with every "person" of people
+      for (let j = i + 1; j < people.length; j++) {
+        people[i].lat = Number(
+          (people[i].lat + (Math.random() - 0.5) * 0.009).toFixed(6)
+        );
+        people[j].lat = Number(
+          (people[j].lat + (Math.random() - 0.5) * 0.009).toFixed(6)
+        );
+        people[i].lon = Number(
+          (people[i].lon + (Math.random() - 0.5) * 0.009).toFixed(6)
+        );
+        people[j].lon = Number(
+          (people[j].lon + (Math.random() - 0.5) * 0.009).toFixed(6)
+        );
+
+        //   console.log(people[j].lon)
+
+        const haversine_m = haversine(people[i], people[j]);
+        // console.log(haversine_m);
+        const haversine_km = haversine_m / 1000; //Results in kilometers
+        const roundedString = haversine_km.toFixed(2);
+        const rounded = Number(roundedString);
+        //   if(rounded <= 1) result.push({first: people[i], second: people[j], distance: rounded});
+        if (rounded <= 1) result.push(people[i], people[j]);
+        //   result.filter((distance) => distance <= 1)
+      }
+    }
+    // console.log(result);
+    return [...new Set(result)];
+  }; */
+  const locations = getFilteredPeople();
+  // console.log(locations);
+
+  // setInterval(function () {
+  //   // locations;
+  //   // getFilteredPeople()
+  // }, 5000);
+  
+
+  
   // const locations = [
   //   { name: "person 1", lat: 51.349932, lon: 12.345204 },
   //   { name: "person 2", lat: 51.348051, lon: 12.346539 },
@@ -71,6 +116,7 @@ function initMap() {
     let marker;
     marker = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i].lat, locations[i].lon),
+
       map: map,
     });
 
