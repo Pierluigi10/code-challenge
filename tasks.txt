@@ -1,8 +1,8 @@
 - understand how google maps works
 - insert static coordinates 
-- (pass from array to object)
-- function creates N of people with random coordinates and name (object)
-- find function that calculate the distance between two points (lat and lon) (haversine??)
+- (pass from array to array of objects)
+- function creates of people with random coordinates and name (array of object)
+- find function that calculate the distance between two points (lat and lon) (haversine)
 - function combines every "person" of people (nested loop)
 - test with 4 people
 
