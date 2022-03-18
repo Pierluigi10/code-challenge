@@ -1,8 +1,6 @@
 #map {
   height: 100%;
   width: 100%;
-  color: red;
-  border: 1px solid red;
 }
 html,
 body {
@@ -10,4 +8,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
