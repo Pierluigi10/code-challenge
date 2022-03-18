@@ -1,5 +1,5 @@
 #map {
-  height: 100%;
+  height: 90%;
   width: 100%;
 }
 html,
@@ -8,3 +8,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* button {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: none;
+  background: rgb(230, 30, 77);
+} */
