@@ -2,13 +2,10 @@
 import generatePeople from "./generatePeople.js";
 import haversine from "./node_modules/haversine-distance/index.js";
 
-const buttonElemet = document.querySelector("button");
-
 const initMap = () => {
   const people = generatePeople(500);
   console.log("generate people", people);
 
-  
   const getClosePeople = () => {
     let result = [];
     for (let i = 0; i < people.length; i++) {
@@ -30,17 +27,13 @@ const initMap = () => {
     return [...new Set(result)];
   };
 
-  
   // console.log("Close people", getClosePeople());
   const positions = getClosePeople();
-
-
-
   console.log("positions", positions);
 
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
-    center: new google.maps.LatLng(51.33524, 12.336818),
+    center: new google.maps.LatLng(51.33524, 12.3368),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
 
